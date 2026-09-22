@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite as horas trabalhadas na semana:
+    <input type="number" id ="Horas">
+    <button onclick="calcular()">CLICK</button>
+    <p id = "resultado"></p>
+
+    <script>
+        function calcular(){
+            let teste 
+            let horas = Number(document.getElementById("Horas").value);
+            if(horas > 44){
+                teste = "Receberá extra"
+
+            }else{
+                teste = "Salário normal"
+            }document.getElementById("resultado").innerHTML = teste
+        }
+    </script>
+</body>
+</html>
