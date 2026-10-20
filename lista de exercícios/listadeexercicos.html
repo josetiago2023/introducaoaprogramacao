@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios 01</title>
+</head>
+
+<body>
+
+    <h1>Lista de Exercícios 01</h1>
+    <hr>
+
+
+    <!-- QUESTÃO 01 -->
+
+    <h3>Questão 01</h3>
+
+    produto
+    <input type="text" id="Produto">
+
+    desconto
+    <input type="text" id="Desconto">
+
+    <button onclick="calcular1()">calcular</button>
+
+    <p id="resultado1"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 02 -->
+
+    <h3>Questão 02</h3>
+
+    Digite o raio:
+    <input type="number" id="Raio">
+
+    <button onclick="calcular2()">click</button>
+
+    <p id="resultado2"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 03 -->
+
+    <h3>QUESTÃO 03 - CONVERSÃO de valores monetários</h3>
+
+    Digite o valor em real:
+    <input type="text" id="valorReal">
+
+    Digite o valor da cotação:
+    <input type="text" id="cotacao">
+
+    <button onclick="calcular3()">Converter</button>
+
+    <p id="resultado3"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 04 -->
+
+    <h3>Questão 04</h3>
+
+    Digite as horas trabalhadas na semana:
+    <input type="number" id="Horas">
+
+    <button onclick="calcular4()">CLICK</button>
+
+    <p id="resultado4"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 05 -->
+
+    <h3>Questão 05</h3>
+
+    Digite o numero:
+    <input type="text" id="numero">
+
+    <button onclick="calcular5()">clique</button>
+
+    <p id="resultado5"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 06 -->
+
+    <h3>Questão 06</h3>
+
+    Digite o usuário:
+    <input type="text" id="user">
+
+    Digite a senha:
+    <input type="text" id="password">
+
+    <button onclick="calcular6()">clique</button>
+
+    <p id="resultado6"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 07 -->
+
+    <h3>Questão 07</h3>
+
+    Digite a nota do aluno:
+
+    <input type="number" id="Nota1">
+    <input type="number" id="Nota2">
+    <input type="number" id="Nota3">
+
+    <button onclick="calcular7()">CLICK</button>
+
+    <p id="resultado7"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 08 -->
+
+    <h3>Questão 08</h3>
+
+    candidato A
+    <input type="number" id="cA">
+
+    nome candidato A
+    <input type="text" id="nomecA">
+
+    <br><br>
+
+    candidato B
+    <input type="number" id="cB">
+
+    Nome candidato B:
+    <input type="text" id="nomecB">
+
+    <br><br>
+
+    vbrancos
+    <input type="number" id="white">
+
+    vnulos
+    <input type="text" id="nulos">
+
+    <button onclick="calcular8()">clique</button>
+
+    <p id="resultado8"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 09 -->
+
+    <h3>Questão 09</h3>
+
+    salario
+    <input type="number" id="salari">
+
+    anos de trabalho
+    <input type="number" id="anos">
+
+    <button onclick="calcular9()">clique</button>
+
+    <p id="resultado9"></p>
+
+
+    <br>
+    <hr>
+
+
+    <!-- QUESTÃO 10 -->
+
+    <h3>Questão 10</h3>
+
+    produto
+    <input type="text" id="produto">
+
+    Quantidade
+    <input type="number" id="quantidade">
+
+    valor da compra
+    <input type="number" id="preco">
+
+    <button onclick="calcular10()">clique</button>
+
+    <p id="resultado10"></p>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // QUESTÃO 01
+
+        function calcular1(){
+
+            let produto = Number(document.getElementById("Produto").value);
+
+            let desconto = Number(document.getElementById("Desconto").value);
+
+            let calculo = (produto * desconto) / 100;
+
+            document.getElementById("resultado1").innerHTML =
+                "valor do DESCONTO = " + calculo.toFixed(2) + " R$";
+        }
+
+
+        // QUESTÃO 02
+
+        function calcular2(){
+
+            let raio = Number(document.getElementById("Raio").value);
+
+            let area = Math.PI * raio * raio;
+
+            document.getElementById("resultado2").innerHTML =
+                "a área do circulo é: " + area.toFixed(2);
+        }
+
+
+        // QUESTÃO 03
+
+        function calcular3(){
+
+            let real = Number(document.getElementById("valorReal").value);
+
+            let cotacao = Number(document.getElementById("cotacao").value);
+
+            let dolar = real / cotacao;
+
+            document.getElementById("resultado3").innerHTML =
+                "Resultado (valor em dolar): " + dolar.toFixed(2);
+        }
+
+
+        // QUESTÃO 04
+
+        function calcular4(){
+
+            let teste;
+
+            let horas = Number(document.getElementById("Horas").value);
+
+            if(horas > 44){
+
+                teste = "Receberá extra";
+
+            }else{
+
+                teste = "Salário normal";
+            }
+
+            document.getElementById("resultado4").innerHTML = teste;
+        }
+
+
+        // QUESTÃO 05
+
+        function calcular5(){
+
+            let n1 = Number(document.getElementById("numero").value);
+
+            if(n1 % 2 == 0){
+
+                document.getElementById("resultado5").innerHTML = "é par";
+
+            }else{
+
+                document.getElementById("resultado5").innerHTML = "é impar";
+            }
+        }
+
+
+        // QUESTÃO 06
+
+        function calcular6(){
+
+            let login = document.getElementById("user").value;
+
+            let senha = document.getElementById("password").value;
+
+            if(login == "login" && senha == "senha"){
+
+                document.getElementById("resultado6").innerHTML =
+                    "autenticado";
+
+            }else{
+
+                document.getElementById("resultado6").innerHTML =
+                    "incorreto";
+            }
+        }
+
+
+        // QUESTÃO 07
+
+        function calcular7(){
+
+            let teste;
+
+            let nota1 = Number(document.getElementById("Nota1").value);
+
+            let nota2 = Number(document.getElementById("Nota2").value);
+
+            let nota3 = Number(document.getElementById("Nota3").value);
+
+            let media = (nota1 + nota2 + nota3) / 3;
+
+            if(media < 40){
+
+                teste = "Reprovado";
+
+            }else if(media <= 69){
+
+                teste = "Final";
+
+            }else{
+
+                teste = "Aprovado";
+            }
+
+            document.getElementById("resultado7").innerHTML = teste;
+        }
+
+
+        // QUESTÃO 08
+
+        function calcular8(){
+
+            let candA = Number(document.getElementById("cA").value);
+
+            let nomecandA = document.getElementById("nomecA").value;
+
+            let candB = Number(document.getElementById("cB").value);
+
+            let nomecandB = document.getElementById("nomecB").value;
+
+            let brancos = Number(document.getElementById("white").value);
+
+            let nulo = Number(document.getElementById("nulos").value);
+
+            if(candA > candB){
+
+                document.getElementById("resultado8").innerHTML =
+                    "candidato vencedor é: " + nomecandA +
+                    "<br>quantidade de votos: " + candA;
+
+            }else{
+
+                document.getElementById("resultado8").innerHTML =
+                    "candidato vencedor é: " + nomecandB +
+                    "<br>quantidade de votos é: " + candB;
+            }
+        }
+
+
+        // QUESTÃO 09
+
+        function calcular9(){
+
+            let teste;
+
+            let salario = Number(document.getElementById("salari").value);
+
+            let anostrabalho = Number(document.getElementById("anos").value);
+
+            if(anostrabalho >= 0 && anostrabalho <= 9){
+
+                let reajuste0_9 = (salario * 8) / 100;
+
+                let reajustado = salario + reajuste0_9;
+
+                teste = "salario com reajuste no valor de: " + reajustado;
+
+            }else if(anostrabalho >= 10 && anostrabalho <= 19){
+
+                let reajuste10_19 = (salario * 10) / 100;
+
+                let reajustado10_19 = salario + reajuste10_19;
+
+                teste = "salario reajustado no valor de: " + reajustado10_19;
+
+            }else if(anostrabalho >= 20){
+
+                salario += (salario * 15) / 100;
+
+                teste = "salario reajustado no valor de: " + salario;
+            }
+
+            document.getElementById("resultado9").innerHTML = teste;
+        }
+
+
+        // QUESTÃO 10
+
+        function calcular10(){
+
+            let teste;
+
+            let Produto = document.getElementById("produto").value;
+
+            let Quantidade = Number(document.getElementById("quantidade").value);
+
+            let Preco = Number(document.getElementById("preco").value);
+
+            let V_inicial = Quantidade * Preco;
+
+            let V_final = 0;
+
+
+            if(V_inicial > 500){
+
+                V_final += V_inicial * 0.85;
+
+                teste = "valor da compra " + V_inicial +
+                        "<br> valor final: " + V_final;
+
+
+            }else if(V_inicial >= 201 && V_inicial <= 500){
+
+                V_final += V_inicial * 0.90;
+
+                teste = "valor da compra: " + V_inicial +
+                        "<br>valor final " + V_final;
+
+
+            }else if(V_inicial <= 200){
+
+                teste = "sem desconto";
+
+            }else{
+
+                teste = "coloque um valor >= 201R$ para obter desconto";
+            }
+
+            document.getElementById("resultado10").innerHTML = teste;
+        }
+
+    </script>
+
+</body>
+
+</html>
+
