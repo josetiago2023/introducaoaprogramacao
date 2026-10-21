@@ -6,18 +6,34 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- control + shift + j -->
     <p id = "resultado"></p>
-
+    <p id = "resultado2"></p>
+    <button onclick = "questao1()">q1</button><br> <br> <br>
+    <button onclick = "questao2()">q2</button>
     <script>
-        let soma = 0;
+        // questao 01
+        function questao1(){
+             let soma = 0;
         for(let i = 1; i <= 5; i++){
             let nota = Number(prompt("Digite a nota: "));
             soma = soma + nota;
-            document.getElementById("resultado").innerHTML = nota;
+            //document.getElementById("resultado").innerHTML = nota;
+            //console.log(nota);
         }
 
         let media = soma / 5;
         document.getElementById("resultado").innerHTML = "A média é " + media;
+        //console.log("A média é " + media);
+
+        }
+       
+
+        //function questao2(){
+            let numero = Number(prompt("Digite: "));
+            
+       // }
+        
     </script>
 </body>
 </html>
