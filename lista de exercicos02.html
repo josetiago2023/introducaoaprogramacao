@@ -12,8 +12,18 @@
     <br><br>
 
      <p>questao 2</p>
-    <button onclick = "q2()">q1</button>
+    <button onclick = "q2()">q2</button>
     <br><br>
+
+    <button onclick="q3()">q3</button><br><br>
+
+    <button onclick = "q4()">q4</button>
+<br><br>
+
+<button onclick="q5()">questao5</button>
+<br><br>
+
+<button onclick="q6()">questao6</button>
 
     <p>Questao 11</p>
     <button onclick="q11()">q11</button>
@@ -38,14 +48,62 @@ alert(media);
         //questao2:
         function q2(){
             let n = Number(prompt("Digite o número:"));
-            for(let i = 1; i >= 2; i++){
-                
+            for(let i = 1; i <= 10; i++){
+                let resultado = n * i;
+                alert(n + "x"+ i + "=" + resultado);
             }
+            
         }
 
+    
+
+    function q3(){
+        let maior = 0;
+        for(let i = 1; i <= 5; i++){
+            let numero = Number(prompt("digite"));
+            if(numero > maior){
+                maior = numero;
+            }
+        }
+        alert("a maior nota é " + maior);
+
+    }
         
+    function q4(){
+        let menor = 0;
+        for(let i = 1; i <= 5; i++){
+            let numero = Number(prompt("digite:"));
+            if(i == 1 || numero < menor){
+                menor = numero
+                            }
+        }alert("menor numero " + menor);
+
+
+    }
+
+    function q5(){
+        let soma = 0;
+        let menor = 0;
+        let maior = 0;
+
+        for(let i = 1; i <= 5; i++){
+        let numero = Number(prompt());
+            soma += numero;
+
+            if(numero > maior){
+                maior = numero;
+            }if(i == 1 || numero < menor){
+                menor = numero;
+            }
+        }
+        let media = (soma - maior - menor) / 3;
+        alert("menor numero: " + menor + " " + "maior numero: " + maior + "media: " + media);
+    }
+
+    function q6(){
         
-        
+
+
         function q11(){
             //questao 11:numeros pares de i até o numero digitado
        
