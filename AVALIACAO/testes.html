@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="q1()">questao 01</button><br><br><br>
+    <button onclick="q2()">questao 02</button>
+
+    <script>
+        //q1 - criar um vetor e add. 05 nomes.
+// q2 - criar um vetor e add. 05 notas. resultado: informar a maior nota.
+// criar um vetor e add. 05 nomes, trocar os nomes da 1º e ultima posicao. resultado: imprimir op vetor.
+// if notas < notas[i] notas[i] recebe recuperação.
+        function q1(){
+            let nomes = [];
+            for(let i = 0; i < 5; i++){
+                let nome = prompt("Digite o nome: ");
+                nomes.push(nome);
+            }
+            //alert(nomes[0] + nomes[4]);
+            alert("primeiro nome: " + nomes[0]);
+            alert("ultimo nome: " + nomes[nomes.length-1]);
+            
+
+        }
+
+        function q2(){
+            let notas[];
+            let maior = 0;
+            for(let i = 0; i < 5; i++){
+                let nota = Number(prompt("digite o nota"));
+                notas.push(nota);
+
+            for(let i = 0; i < 5; i++){
+                if(notas[i] > maior){
+                    maior = notas[i];
+                    
+                }
+            }
+            }alert(maior);
+        }        
+
+
+    </script>
+</body>
+</html>
