@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="q1()"></button><br><br>
+
+    <button onclick="q3()"></button><br><br>
+
+     <button onclick="q4()"></button><br><br>
+
+    <script>
+        function q1(){
+            let numero = Number(prompt("digite:"));
+            let contador = 0;
+            for(let i = 1; i <= numero; i++){
+                //console.log(numero + "%" + i + "=" + numero % i);
+                if(numero % i == 0){
+                    contador+= 1;
+                }
+            }
+            if(contador == 2){
+                alert("numero primo");
+            }else{
+                alert("nao é primo");
+            }
+        }
+
+
+        function q3(){
+            let numero = Number(prompt("digite:"));
+            let a = 0;
+            let b = 1;
+            let c;
+            for(let i = 1; i <= numero; i++){
+                alert(a);
+                c = a + b;
+                a = b;
+                b = c;
+               
+              
+            }
+
+        }
+
+        function q4(){
+            
+        }
+    </script>
+</body>
+</html>

@@ -25,6 +25,22 @@
 
 <button onclick="q6()">questao6</button>
 
+<button onclick="q7()"></button>
+
+<button onclick="q8()"></button>
+<br><br>
+<button onclick="q9"></button>
+<br><br>
+<button onclick="q10"></button>
+<br><br>
+<button onclick="q11"></button><br><br>
+
+<button onclick="q12()"></button><br><br>
+
+<button onclick="q13()"></button><br><br>
+
+<button onclick="q14"></button><br><br>
+
     <p>Questao 11</p>
     <button onclick="q11()">q11</button>
     <script>
@@ -101,11 +117,107 @@ alert(media);
     }
 
     function q6(){
-        
+           let aprovadas = 0;
+
+    for(let i = 1; i <= 5; i++){
+        let nota = Number(prompt("Digite uma nota:"));
+
+        if(nota >= 70){
+            aprovadas++;
+        }
+    }
+
+    alert("Quantidade de notas aprovadas: " + aprovadas);
+}
+
+
+
+
+questao7:
+function q7(){
+    let numero = Number(prompt("Digite um número positivo:"));
+
+    for(let i = numero; i >= 1; i--){
+        alert(i);
+    }
+
+    alert("Contagem finalizada!");
+}
+
+
+
+questao8
+function q8(){
+    let soma = 0;
+    let desconto = 0;
+
+    for(let i = 1; i <= 5; i++){
+        let preco = Number(prompt("Digite o preço do produto:"));
+        soma += preco;
+    }
+
+    if(soma > 500){
+        desconto = soma * 0.05;
+    }
+
+    let total = soma - desconto;
+
+    alert("Valor total: R$ " + soma);
+    alert("Desconto: R$ " + desconto);
+    alert("Valor final: R$ " + total);
+}
+
+
+questao9
+function q9(){
+    let positivos = 0;
+    let negativos = 0;
+    let zeros = 0;
+
+    for(let i = 1; i <= 10; i++){
+        let numero = Number(prompt("Digite um número:"));
+
+        if(numero > 0){
+            positivos++;
+        }else if(numero < 0){
+            negativos++;
+        }else{
+            zeros++;
+        }
+    }
+
+    alert("Positivos: " + positivos);
+    alert("Negativos: " + negativos);
+    alert("Zeros: " + zeros);
+}
+
+
+questao10
+function q10(){
+    let soma = 0;
+
+    for(let i = 1; i <= 5; i++){
+        let nota = Number(prompt("Digite uma nota:"));
+
+        if(nota >= 70){
+            nota += 10;
+        }
+
+        soma += nota;
+    }
+
+    let media = soma / 5;
+
+    alert("Média final: " + media);
+}
+
+
+
 
 
         function q11(){
             //questao 11:numeros pares de i até o numero digitado
+
        
         let n11 = Number(prompt("digite"));
         for(let i = 2; i <= n11; i+=2){
@@ -116,8 +228,71 @@ alert(media);
         //questao 08:
         
         //questao9:
+
+function q12(){
+     let soma = 0;
+
+    for(let i = 1; i <= 5; i++){
+        let preco = Number(prompt("Digite o preço do produto:"));
+
+        if(preco >= 100){
+            preco = preco * 0.95;
         }
+
+        soma += preco;
+    }
+
+    alert("Total da compra: R$ " + soma);
+}
+
+
+
+questao13
+function q13(){
+    let somaPares = 0;
+    let somaImpares = 0;
+
+    for(let i = 1; i <= 10; i++){
+        let numero = Number(prompt("Digite um número:"));
+
+        if(numero % 2 == 0){
+            somaPares += numero;
+        }else{
+            somaImpares += numero;
+        }
+    }
+
+    alert("Soma dos pares: " + somaPares);
+    alert("Soma dos ímpares: " + somaImpares);
+}
+
+
+
+}        
         
+function q14(){
+    
+let N = Number(prompt("Digite a quantidade de termos:"));
+
+let a = 0;
+let b = 1;
+
+let resultado = "";
+
+for(let i = 1; i <= N; i++){
+
+    resultado += a + " ";
+
+    let proximo = a + b;
+
+    a = b;
+    b = proximo;
+
+}
+
+alert(resultado);
+
+}            
        
 
 
